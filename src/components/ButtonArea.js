@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from './Button';
 
-export const ButtonArea = () => {
+export const ButtonArea = ({onClick}) => {
     const buttonList = [
       {
         className: "box box-Ac",
@@ -84,7 +84,7 @@ export const ButtonArea = () => {
     <>
       
           {buttonList.map((item, index) => {
-          return <Button clsNm={item.className} label={item.label}></Button>
+          return <Button clsNm={item.className} label={item.label} onClick={onClick} key={index}></Button>
       })}
      
     </>
