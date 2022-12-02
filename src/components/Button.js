@@ -1,13 +1,16 @@
 import React from 'react'
 
-export const Button = ({ clsNm, label, onClick }) => {
-    const onPressed = (e) => { 
-        e.preventDefault();
-        onClick(label);
-    }
+export const Button = ({ clsNm, label, onClick,}) => {
   return (
     <>
-          <div className={clsNm} onClick={onPressed}>{label}</div>
+      <div
+        className={clsNm}
+        onClick={() => {
+          onClick(label);
+        }}
+      >
+        {label}
+      </div>
     </>
   );
-}
+};
